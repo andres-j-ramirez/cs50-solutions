@@ -1,0 +1,52 @@
+sort1 uses: Bubble Sort
+How do you know?:
+run on sorted5000.txt - time: 0m0.036s
+run on sorted10000.txt - time: 0m0.043s
+run on sorted50000.txt - time: 0m0.518s
+
+run on reversed5000.txt - time: 0m0.071s
+run on reversed10000.txt - time: 0m0.218s
+run on reversed50000.txt - time: 0m4.964s
+
+run on random5000.txt - time: 0m0.057s
+run on random10000.txt - time: 0m0.176s
+run on random50000.txt - time: 0m5.569s
+
+Notes:
+This algorithm is fast when already sorted (N).
+This algorithm takes a while to sort as the size grows when unsorted (N^2)
+
+sort2 uses: Merge Sort
+How do you know?:
+run on sorted5000.txt - time: 0m0.020s
+run on sorted10000.txt - time: 0m0.039s
+run on sorted50000.txt - time: 0m0.541s
+
+run on reversed5000.txt - time: 0m0.030s
+run on reversed10000.txt - time: 0m0.040s
+run on reversed50000.txt - time: 0m0.458s
+
+run on random5000.txt - time: 0m0.024s
+run on random10000.txt - time: 0m0.051s
+run on random50000.txt - time: 0m0.531s
+
+Notes:
+These are all fast and consistent, theta (nlog(n))
+
+sort3 uses: Selection Sort
+
+How do you know?:
+run on sorted5000.txt - time: 0m0.060s
+run on sorted10000.txt - time: 0m0.110s
+run on sorted50000.txt - time: 0m2.406s
+
+run on reversed5000.txt - time: 0m0.049s
+run on reversed10000.txt - time: 0m0.120s
+run on reversed50000.txt - time: 0m2.561s
+
+run on random5000.txt - time: 0m0.040s
+run on random10000.txt - time: 0m0.119s
+run on random50000.txt - time: 0m2.706s
+
+Notes:
+Time climbs with higher sizes, with no short time outlier theta(n^2)
