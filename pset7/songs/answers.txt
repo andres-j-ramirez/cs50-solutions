@@ -1,7 +1,0 @@
-If songs.db contains the top 100 songs of one listener from 2018, how would you characterize their audio aura?
-
-I would say  energy is slightly above average, valance is average, and danceability is above average.
-
-Hypothesize about why the way you’ve calculated this aura might not be very representative of the listener. What better ways of calculating this aura would you propose?
-
-This top 100 includes many genres of music and averaging energy, valence, and danceability won't give you a clear look at what they like to listen to. A better way to determing thier aura would be to weigh their aura on the number of songs in each category of genre. This would group them closely together and if you wanted to average each individual genre you could. Then you could read better what type of music they're into and how much each genre weighs on their music taste. 
