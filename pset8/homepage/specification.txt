@@ -1,0 +1,23 @@
+10 HTML tags used:
+1. h1
+2. hr
+3. h2
+4. p
+5. ul
+6. li
+7. a
+8. br
+9. script
+10. img
+
+5 CSS properties used:
+1. text-align: center;
+2. color: #f2c499;
+3. background-color: #f299dd;
+4. -webkit-text-stroke: 2px brown;
+5. font-size: 80pt;
+(and much more!)
+
+I chose to use Bootstrap's meta tag that allows for mobile responsiveness, I feel this one is a must have for modern websites.
+I also chose to use JavaScript on the home page for an interactive text box that updates text displayed on the screen to match what the user types in real time.
+
