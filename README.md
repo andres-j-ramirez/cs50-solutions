@@ -1,2 +1,1 @@
-# cs50-solutions
-My solutions for Harvard's CS50x 2025 (Problem Sets + Final Project)
+Dis is me trying to learn programming by going through the CS50 course, with the added benfit of learning git/github as well. 
