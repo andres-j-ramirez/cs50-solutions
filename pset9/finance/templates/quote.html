@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Quote
+{% endblock %}
+
+{% block main %}
+    <form action="/quote" method="post">
+        <div class="mb-3">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="symbol" placeholder="Enter stock symbol" type="text">
+        </div>
+        <button class="btn btn-primary" type="submit">Request Quote</button>
+    </form>
+    <br>
+    <p>name: {{ name }}</p>
+    <p>price:
+        {% if price %}
+            {{ price | usd }}
+        {% endif%}
+    </p>
+    <p>symbol: {{ symbol }}</p>
+
+    <br>
+    <h2>Example Stocks:</h2>
+    <ul class="list-unstyled">
+        {% for stock in stocks %}
+            <li>{{ stock.symbol }} - {{ stock.name }}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}
+
