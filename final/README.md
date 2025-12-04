@@ -1,9 +1,6 @@
 # Barça Quiz
 #### Video Demo: <URL HERE>
 #### Description:
-
-# Barça Quiz
-
 This is my final project for CS50: a small web app where you answer quiz questions about FC Barcelona.
 
 It won’t change the world or solve a big problem, but it’s something I take interest in and built for fun, and it can entertain my wife and me for a little while. I learned a lot building it end-to-end.
@@ -84,10 +81,16 @@ I tried to keep the project small but still full-stack so I could practice diffe
   Both the quiz page and the About page extend the same `layout.html`, which keeps the header, navigation, and Barça-inspired colors consistent. This also let me practice using template inheritance instead of copy-pasting HTML.
 
 
-
 ## How to run
-- Clone repository
-- Create virtual enviornment, from terminal (macOS): python -m venv .venv + + source .venv/bin/activate
-- Install dependencies: pip install -r requirements.txt
-- Run Flask: flask run
-- Visit browser page that generates
+
+From a terminal:
+
+1. Clone the repository and go into the `final` folder:
+
+   ```bash
+   git clone https://github.com/andres-j-ramirez/cs50-solutions.git
+   cd cs50-solutions/final
+   python -m venv .venv
+   source .venv/bin/activate
+   pip install -r requirements.txt
+   flask run
