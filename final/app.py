@@ -1,3 +1,8 @@
+# CS50x 2025 Final Project: Barça Quiz
+# This project was developed by Andres Ramirez.
+# I used AI-based tools (ChatGPT) to help brainstorm features, debug issues,
+# and refine code structure, but I understand and reviewed all code myself.
+
 from flask import Flask, render_template, request, session, redirect
 from questions import QUESTIONS, get_question_by_id, choose_next_question
 app = Flask(__name__)
