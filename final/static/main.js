@@ -1,4 +1,6 @@
-console.log("main.js loaded");
+// CS50x 2025 Final Project: Barça Quiz
+// I used AI-based tools (ChatGPT) to help with parts of the keyboard navigation
+// and event-handling logic, but I reviewed and understand all of this code.
 
 // Allow for enter key for next question after a guess
 const guessInput = document.querySelector('input[name="guess"]');
