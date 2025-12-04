@@ -58,6 +58,32 @@ All of the code for the project lives in this "final" folder:
 - `README.md`  
   This file. Describes the project, how it works, and how to run it.
 
+## Design Choices
+
+I tried to keep the project small but still full-stack so I could practice different parts of web development.
+
+- **Flask + Jinja instead of a heavier framework**  
+  I chose Flask because it feels close to what we used in CS50 (routes, templates, helpers). It’s simple enough for a small quiz app but still lets me separate logic (`app.py`, `questions.py`) from presentation (`templates/`).
+
+- **In-memory questions module instead of a database**  
+  All questions live in `questions.py` as a Python list of dictionaries. For this small project, a real database felt like overkill. Storing questions in code made it easier to tweak clues and add/remove questions quickly.
+
+- **Sessions for game state**  
+  I use Flask’s `session` to track which question IDs have already been asked, and the user’s `correct` and `total` score for the current round. That way the user can refresh the page or move through questions without losing their progress, and I don’t have to store anything in a database.
+
+- **Multiple accepted answers and simple normalization**  
+  Each question has a list of acceptable answers (like `"messi"`, `"leo messi"`, `"lionel messi"`). Before checking, I lowercase the user’s guess, strip it from extra whitespaces, and compare it against those options, so small differences in capitalization or phrasing still count as correct.
+
+- **Keyboard-friendly UX with a tiny bit of JavaScript**  
+  I wanted the quiz to be playable almost entirely from the keyboard. The JS in `static/main.js` listens for the Enter key: the first Enter submits the guess, and once a result is shown, pressing Enter again triggers the “Next question” form. This made it feel faster and more “game-like”.
+
+- **No repeat questions per round**  
+  Each round keeps a list of `asked_ids` in the session. When choosing the next question, the app filters out ones that were already asked. When the user finishes all questions, the app shows a summary and a “Play again” button that resets the session state.
+
+- **Simple two-page layout with shared styling**  
+  Both the quiz page and the About page extend the same `layout.html`, which keeps the header, navigation, and Barça-inspired colors consistent. This also let me practice using template inheritance instead of copy-pasting HTML.
+
+
 
 ## How to run
 - Clone repository
