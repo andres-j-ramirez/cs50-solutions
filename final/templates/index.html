@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+
+<title>
+    {% block title %}
+    Barça Quiz
+    {% endblock %}
+</title>
+
+{% block body %}
+    <h2>Guess the Culer</h2>
+    <p>Score: {{ correct }} / {{ total }}</p>
+
+    {% if finished %}
+        <p>You've answered all available questions!</p>
+        <p> You scored {{ correct }} / {{ total }} this round.</p>
+        <form method="post" style="margin-top: 1rem;">
+            <button type="submit" name="action" value="reset" class="btn-secondary">Play again</button>
+        </form>
+    {% else %}
+
+        <div class="quiz-card">
+        <p>{{ question.clue }}</p>            
+            <form id="guess-form" method="post">
+                <input type="hidden" name="action" value="answer">
+                <input type="hidden" name="question_id" value="{{ question.id }}">
+                <input name="guess" placeholder="Your guess">
+                <button type="submit" class="btn-primary">Submit</button>
+            </form>
+            <div id="result">
+                {% if result == "correct" %}
+                    <p class="result-correct">Correct!</p>
+                {% elif result == "incorrect" %}
+                    <p class="result-incorrect">Incorrect!</p>
+                {% endif %}
+            </div>
+        </div>
+        <form id="next-form" method="post" style="margin-top: 1rem;">
+            <input type="hidden" name="action" value="next">
+            <button type="submit" class="btn-secondary">Next question</button>
+        </form>
+    {% endif %}
+{% endblock %}

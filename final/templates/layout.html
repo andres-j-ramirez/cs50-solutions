@@ -1,0 +1,23 @@
+<!doctype html>
+<html land="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Barça Quiz</title>
+        <link rel="stylesheet" href="{{url_for('static', filename='styles.css')}}">
+    </head>
+    <body>
+        <header class="site-header">
+            <h1>Barça Quiz</h1>
+            <nav class="site-nav">
+                <a href="{{ url_for('index') }}">Quiz</a>
+                <a href="{{ url_for('about') }}">About</a>
+            </nav>
+        </header>
+        <hr>
+        <main>
+            {% block body %}{% endblock %}
+        </main>   
+        
+        <script src="{{ url_for('static', filename='main.js') }}"></script>
+    </body>
+</html>

@@ -1,0 +1,110 @@
+body {
+    font-family: system-ui, sans-serif;
+}
+
+p {
+    color: #FDB813;
+    font-size: larger;
+}
+
+h1 {
+    color: #004D98;
+}
+
+h2 {
+    color:#A50044;
+}
+
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+.quiz-card {
+    margin-top: 1.5rem;  
+    padding: 1.5rem;
+    background: #111111;  
+    border-radius: 12px;
+}
+
+.result-correct {
+    color: #2ecc71;  
+    font-weight: 600;
+    margin-top: 0.75rem;
+    font-size: x-large;
+}
+
+.result-incorrect {
+    color: #e74c3c;     
+    font-weight: 600;
+    margin-top: 0.75rem;
+    font-size: x-large;
+}
+
+#guess-form input[name="guess"] {
+    width: 100%;
+    max-width: 320px;
+    padding: 0.6rem 0.8rem;
+    font-size: 1rem;
+    border-radius: 6px;
+    border: 1px solid #444;
+    background-color: #000;
+    color: #fff;
+}
+
+.btn-primary{
+    padding: 0.5rem 1.1rem;
+    font-size: 0.95rem;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.btn-secondary {
+    padding: 0.5rem 1.1rem;
+    font-size: 0.95rem;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+/* ChatGPT suggested style improvements below */
+.btn-primary {
+    background-color: #004D98;  
+    color: #ffffff;
+}
+
+.btn-primary:hover {
+    background-color: #00366c; 
+}
+
+.btn-secondary {
+    background-color: #A50044;  
+    color: #ffffff;
+}
+
+.btn-secondary:hover {
+    background-color: #7a0032;
+}
+
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+}
+
+.site-nav a {
+    margin-left: 1rem;
+    text-decoration: none;
+    color: #FDB813;
+    font-weight: 500;
+    font-size: large;
+}
+
+.site-nav a:hover {
+    text-decoration: underline;
+}
